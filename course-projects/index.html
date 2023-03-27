@@ -1,1 +1,74 @@
-HELLO!
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>15-618 Final Project: K-means clustering</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+</head>
+<body>
+
+<div class="container">
+    <h1> K-means Clustering Done Right: Parallel K-means with OpenMP</h1>
+    <h2> Project done by Tianqi (Andy) Wu and Alex Zhang</h2>
+    <p>URL: tianqi-wu.github.io/course-projects/index.html</p>
+    <p>Project Goal: Building an efficient parallelized K-means clustering with OpenMP</p>
+
+
+    <h3>BACKGROUND (with help from 10-601 lectures):</h3>
+
+    <p>The goal of clustering algorithms in machine learning is to partition unlabeled data into groups with similar features. 
+    It can be very useful when analyzing data and classify them. The goal of K-means clustering, in this scenario, is to find 
+    an assignment of points to each cluster. </p>
+
+    <p>The algorithm can be expressed verbally as follows: </p>
+    We have a series of unlabeled feature vectors. 
+    We first initial a 
+
+    ***Ask for Prof's permission***
+
+    <h3>THE CHALLENGE</h3>
+    
+    1. The curse of dimensionality. Given the mass amount of data and the possible size of the schema (if any), 
+    the data can be relatively difficult to handle, and this can lead to even exponentially growing search time.
+
+    2. Initialization issues. K-means, when not being initialized correctly, can lead to problems. For example, an outlier can 
+    drive the result unreasonable from the first glance.
+
+    3. Termination. In the realm of K-means, when and how to terminate the task can be an issue.
+
+    Resources:
+
+    ????????? Should we use an existing C++ implementation and try to tweak it, or should we write our own?
+
+    ????????? What data should we use? Kaggle/other data ????????? 
+
+    ????????? Reference: 10601 slides ???????
+
+    <h3>Goals</h3>
+
+    1. Implement a parallel K-means algorithm with OpenMP to reduce clustering time. We are thinking about parallelization based on 
+    each cluster center / each data point. Which one would work better?
+
+    2. Find a strategy to detect early initialization errors (if any) / try various initialization strategies
+
+    3. Present the visualization process using tools so that it can be easily identifiable
+
+    4. Find a way to preprocess (if any) to significantly reduce find-nearest time
+
+    <h3>Platform:</h3>
+
+    OpenMP + GHC/PSC. We are very proficient with OpenMP. Probably add an evaluation also.
+
+
+</div>
+
+                
+
+                
+</body>
+</html>
+
