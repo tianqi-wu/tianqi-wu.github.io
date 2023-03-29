@@ -8,6 +8,11 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <style>
+    p {
+      font-size: 18px;
+    }
+    </style>
 </head>
 <body>
 
@@ -39,36 +44,38 @@
       
     <h3>THE CHALLENGE</h3>
     
-    1. The curse of dimensionality. Given the mass amount of data and the possible size of the schema (if any), 
-    the data can be relatively difficult to handle, and this can lead to even exponentially growing search time.
+    <p>1. The curse of dimensionality. Given the mass amount of data and the possible size of the schema (if any), 
+    the data can be relatively difficult to handle, and this can lead to even exponentially growing search time.</p>
 
-    2. Initialization issues. K-means clustering, when not being initialized correctly, can lead to problems. For example, an outlier can 
-    drive the result unreasonable from the first glance.
+    <p>2. Initialization issues. K-means clustering, when not being initialized correctly, can lead to problems. For example, an outlier can 
+    drive the result unreasonable from the first glance.</p>
 
-    3. Termination. In the realm of K-means, when and how to terminate the task can be an issue.
+    <p>3. Termination. In the realm of K-means, when and how to terminate the task can be an issue.</p>
 
-    4. Parameters. Whether the parameter is set up correctly may also influence the algorithm.
+    <p>4. Parameters. Whether the parameter is set up correctly may also influence the algorithm.</p>
 
     <h3>Resources:</h3>
 
     We hope that we can start the project from scratch. However, we hope that we will refer to existing pesudocode of KNN and K-means clustering,
+    
     We also hope that we can use assignment 3 as a reference for general syntax / use cases. We would like to refer to materials such as slides from 10-601,
+    
     and possibly papers on what and how to parallelize.
 
     <h3>Goals</h3>
 
-    1. MUST-DO[50%]: Implement a sequential KNN / K-means clustering algorithms. 
+  <p>1. MUST-DO[50%]: Implement a sequential KNN / K-means clustering algorithms. </p>
 
-    2. MUST-DO[75%]: Implement parallel KNN & K-means algorithms with OpenMP to reduce computational/clustering time. We are thinking about parallelization based on 
-    each cluster center / each data point. We hope to scale the code sublinearly at best, given the overhead for assigning and dealing with tasks.
+  <p>2. MUST-DO[75%]: Implement parallel KNN & K-means algorithms with OpenMP to reduce computational/clustering time. We are thinking about parallelization based on 
+    each cluster center / each data point. We hope to scale the code sublinearly at best, given the overhead for assigning and dealing with tasks.</p>
 
-    3. MUST-DO[100%]: record performance on both algorithms with various parameters/hyperparameters and discuss decision tradeoffs.
+  <p>3. MUST-DO[100%]: record performance on both algorithms with various parameters/hyperparameters and discuss decision tradeoffs.</p>
 
-    4. HOPE-TO-DO[110%]: Find a strategy to aovid early initialization errors (if any) / try various initialization strategies
+  <p>4. HOPE-TO-DO[110%]: Find a strategy to aovid early initialization errors (if any) / try various initialization strategies.</p>
 
-    5. HOPE-TO-DO[115%]: Present the visualization process using tools so that it can be easily identifiable
+  <p>5. HOPE-TO-DO[115%]: Present the visualization process using tools so that it can be easily identifiable.</p>
 
-    6. HOPE-TO-DO[125%]: Find a way to preprocess (if any) to significantly reduce find-nearest time
+  <p>6. HOPE-TO-DO[125%]: Find a way to preprocess (if any) to significantly reduce find-nearest time.</p>
 
     <h3>Platform:</h3>
 
@@ -77,17 +84,17 @@
 
     <h3>Schedule:</h3>
 
-    4/2 - 4/9: implement KNN and K-means algorithms, sequentially
+  <p>4/2 - 4/9: implement KNN and K-means algorithms, sequentially</p>
 
-    4/9 - 4/16: add OpenMP to naive KNN and K-means, naive performance evaluation
+  <p> 4/9 - 4/16: add OpenMP to naive KNN and K-means, naive performance evaluation</p>
 
-    4/16 - 4/23: write milestone report; advanced performance evaulation (e.g. hyperparameter tuning/initialization), visualization for poster session/final project
+  <p>4/16 - 4/23: write milestone report; advanced performance evaulation (e.g. hyperparameter tuning/initialization), visualization for poster session/final project</p>
     
-    4/23 - 4/30: Wrap up and constuct report (possibly accompanying with dynamic visualizations)
+  <p>4/23 - 4/30: Wrap up and constuct report (possibly accompanying with dynamic visualizations)</p>
     
-    4/30 - 5/5: Submit our project, Make a poster with our best effort to make it beautiful and informative.
+  <p>4/30 - 5/5: Submit our project, Make a poster with our best effort to make it beautiful and informative.</p>
 
-    The updates for each steps will be posted here accordingly. Thanks for reading this!
+  <p>The updates for each steps will be posted here accordingly. Thanks for reading this!</p>
 
 </div>
 
