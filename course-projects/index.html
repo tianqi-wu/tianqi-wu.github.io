@@ -98,8 +98,31 @@
 
 </div>
 
+<h3>Developer's Log Apr.2nd to Apr. 9th: starting with correct results</h3>
 
-                
+We have successfully dealt with the initial steps. That is, implementing a sequential version and test its correctness.
+
+For correctness, we decide to use Scikit-learn, a well-known and posssibly most well-tested ML package in the world, to test our results.
+
+We compared the results and figured out our result is the same with Scikit-learn.
+
+We will continue working on parallelizing it.
+
+<h3>Developer's Log Apr.10th to Apr. 17th: Superbly Faster Parallelism achieved, and naive evaluations</h3>
+
+We have successfully dealt with parallelism. We are happy to find out that with both OpenMP and MPI (we would like to compare both 
+packages and compare their differences), the performance has a dramatic increase for both packages. 
+
+We figured out that running time has been dramatically decreasing; however, OpenMP outperforms MPI, 
+probably because message passing takes too long a time. 
+
+Moreover, we figured out that when running MPI with few threads, MPI would be worse than sequential implementation.
+Therefore, we decided to optimize OpenMP further, unless we find something else worth noticing and implementing on the MPI side.
+
+For the next weeks, we will try to perform advanced optimization and performance analysis; if successful,
+we will add more details to the algorithms(start conditions, initialization, etc) and try to make interactive visualization based on that.
+
+
 </body>
 </html>
 
