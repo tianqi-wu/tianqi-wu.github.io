@@ -22,6 +22,12 @@
     <p>URL: tianqi-wu.github.io/course-projects/index.html</p>
     <p>Summary: Our team hopes to explore on how parallelization can improve ML algorithms by building efficient parallelized KNN and K-means clustering with OpenMP, and analyzing tradeoffs based on them.</p>
 
+    <h2>A list of deliverables:</h2>
+    
+    <p>Final Project Report: <a href="./15618-FinalReport.pdf">Final Project Report</a> </p>
+    <p>Codebase: <a href="https://github.com/tianqi-wu/15618-Final-Project">Final Project Codebase</a> </p>
+    
+
 
     <h3>BACKGROUND (from 10-601 lecture notes):</h3>
 
@@ -96,31 +102,59 @@
 
   <p>The updates for each steps will be posted here accordingly. Thanks for reading this!</p>
 
+  <h3>Developer's Log Apr.2nd to Apr. 9th: starting with correct results</h3>
+
+<p>We have successfully dealt with the initial steps. That is, implementing a sequential version and test its correctness. For correctness, we decide to use Scikit-learn, a well-known and posssibly most well-tested ML package in the world, to test our results.</p>
+  
+<p>We compared the results and figured out our result is the same with Scikit-learn. We will continue working on parallelizing it.</p>
+  
+  <h3>Developer's Log Apr.10th to Apr. 17th: Superbly Faster Parallelism achieved, and naive evaluations</h3>
+  
+  <p>We have successfully dealt with parallelism. We are happy to find out that with both OpenMP and MPI (we would like to compare both 
+  packages and compare their differences), the performance has a dramatic increase for both packages. </p>
+  
+  <p>We figured out that running time has been dramatically decreasing; however, OpenMP outperforms MPI, 
+  probably because message passing takes too long a time. </p>
+  
+<p>Moreover, we figured out that when running MPI with few threads, MPI would be worse than sequential implementation.
+  Therefore, we decided to optimize OpenMP further, unless we find something else worth noticing and implementing on the MPI side.</p>
+  
+<p>For the next weeks, we will try to perform advanced optimization and performance analysis; if successful,
+  we will add more details to the algorithms(start conditions, initialization, etc) and try to make interactive visualization based on that.</p>
+
+ <h3>Final Week recollections</h3>
+
+<p> After the milestone meeting, Dr. Jia suggested another idea: the combination of OpenMP and MPI. We are able to finish this.
+  Moreover, we tweaked our goal after the discussion and implemented the following content after the milestone:
+</p>
+
+<p>3. Record performance on both algorithms with various parameters/hyperparameters and discuss decision tradeoffs.</p>
+
+<p>4. Try various initialization strategies / datasets.</p>
+
+<p>5. Present the visualization process using tools so that it can be easily identifiable.</p>
+
+<p>6. Combine OpenMP and MPI.</p>
+
+<p>
+To reach the goal above with ease, we did the following:
+</p>
+  
+<p>1. Add automation scripts for speeding up evaluation and data generation</p>
+
+<p>2. Used various packages to help visualizations</p>
+
+<p>3. Extended our previous code for performances</p>
+
+<p>Our code reached reasonable fast speedup. Please refer to our report and codebase here:</p>
+
+<p>Final Project Report: <a href="./15618-FinalReport.pdf">Final Project Report</a> </p>
+<p>Codebase: <a href="https://github.com/tianqi-wu/15618-Final-Project">Final Project Codebase</a> </p>
+
+
+
 </div>
 
-<h3>Developer's Log Apr.2nd to Apr. 9th: starting with correct results</h3>
-
-We have successfully dealt with the initial steps. That is, implementing a sequential version and test its correctness.
-
-For correctness, we decide to use Scikit-learn, a well-known and posssibly most well-tested ML package in the world, to test our results.
-
-We compared the results and figured out our result is the same with Scikit-learn.
-
-We will continue working on parallelizing it.
-
-<h3>Developer's Log Apr.10th to Apr. 17th: Superbly Faster Parallelism achieved, and naive evaluations</h3>
-
-We have successfully dealt with parallelism. We are happy to find out that with both OpenMP and MPI (we would like to compare both 
-packages and compare their differences), the performance has a dramatic increase for both packages. 
-
-We figured out that running time has been dramatically decreasing; however, OpenMP outperforms MPI, 
-probably because message passing takes too long a time. 
-
-Moreover, we figured out that when running MPI with few threads, MPI would be worse than sequential implementation.
-Therefore, we decided to optimize OpenMP further, unless we find something else worth noticing and implementing on the MPI side.
-
-For the next weeks, we will try to perform advanced optimization and performance analysis; if successful,
-we will add more details to the algorithms(start conditions, initialization, etc) and try to make interactive visualization based on that.
 
 
 </body>
